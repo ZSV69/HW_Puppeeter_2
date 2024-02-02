@@ -38,6 +38,6 @@ describe("Service for Movie tickets order", () => {
     await page.click(".acceptin-button");
     await page.click(".acceptin-button");
     const actual = await getText(page, ".ticket__hint");
-    await expect(actual).contain("Выыбранно Вами место уже занято");
+    await expect(actual).contain("Выбранно Вами место уже занято");
   })
 });
