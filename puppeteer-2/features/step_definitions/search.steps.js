@@ -40,11 +40,9 @@ Then ("The user is booking tickets1", async function () {
   return await clickElement(this.page, ".acceptin-button");
 });
 
-Then("The user confirms the booking1", async function (string) {
+Then("The user confirms the booking1 {string}", async function (string) {
   const actual = await getText(this.page, ".acceptin-button");
-  await expect(actual).contain(
-    "Получить код бронирования"
-  );
+  await expect(actual).contain("Получить код бронирования");
 });
 
 Given("User is on page2 {string}", async function (string) {
@@ -65,9 +63,9 @@ Then ("The user chooses a location2", async function () {
 Then ("The user is booking tickets2", async function () {
   return await clickElement(this.page, ".acceptin-button");
 });
-Then("The user confirms the booking2", async function (string) {
+Then("The user confirms the booking2 {string}", async function (string) {
   const actual = await getText(this.page, ".acceptin-button");
-  await expect(actual).сontain("Получить код бронирования");
+  await expect(actual).contain("Получить код бронирования");
 });
 
 Given("User is on page3 {string}", async function (string) {
@@ -93,7 +91,7 @@ Then ("The user has booked tickets", async function () {
 Then ("The user has confirmed the booking of tickets", async function () {
   return await clickElement(this.page, ".acceptin-button");
 });
-Then("Get Error", async function (string) {
+Then("Get Error {string}", async function (string) {
   const actual = await getText(this.page, ".ticket__hint");
-  await expect(actual).сontain("Выбранное Вами место уже забронировано");
+  await expect(actual).contain("Выбранное Вами место уже забронировано");
 });

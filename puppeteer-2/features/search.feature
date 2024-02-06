@@ -6,7 +6,7 @@ Feature: Service for Movie tickets order
         Then The user selects the desired movie1
         Then The user chooses a location1
         Then The user is booking tickets1
-        Then The user confirms the booking "Получить код бронирования"
+        Then The user confirms the booking1 "Получить код бронирования"
     
         Scenario: Mickey Mouse positive
         Given User is on page2 "http://qamid.tmweb.ru/client/index.php"
